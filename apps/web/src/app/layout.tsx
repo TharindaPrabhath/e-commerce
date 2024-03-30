@@ -1,7 +1,6 @@
 import "@pulzeup/ui/globals.css";
 import type { Metadata } from "next";
 import { Poppins } from "next/font/google";
-import { db } from "@lib/db";
 
 const poppins = Poppins({ subsets: ["latin"], weight: ["400", "600", "800"] });
 
@@ -15,8 +14,6 @@ export default async function RootLayout({
 }: {
   children: React.ReactNode;
 }): Promise<JSX.Element> {
-  const users = await db.user.findMany();
-  console.log("users", users);
   return (
     <html lang="en">
       <body className={poppins.className}>{children}</body>
