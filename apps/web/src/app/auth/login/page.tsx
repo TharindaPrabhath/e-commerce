@@ -17,7 +17,7 @@ export default function Login() {
     signIn("google", { callbackUrl: DEFAULT_LOGIN_REDIRECT });
   };
   return (
-    <main className="flex justify-center items-center w-full h-full">
+    <main className="container flex justify-center items-center w-full h-full">
       <Card className="mx-auto max-w-sm">
         <CardHeader>
           <CardTitle className="text-2xl">Login</CardTitle>
