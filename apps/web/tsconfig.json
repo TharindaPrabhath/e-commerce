@@ -6,9 +6,10 @@
         "name": "next",
       },
     ],
+    "declaration": false,
     "baseUrl": ".",
     "paths": {
-      "@lib/*": ["./lib/*"],
+      "@/*": ["./*"],
     },
   },
   "include": [
