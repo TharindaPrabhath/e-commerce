@@ -1,7 +1,7 @@
 export const PublicRoutes = ["/"];
 
 export const LOGIN_ROUTE = "/auth/login";
-export const REGISTER_ROUTE = "/auth/register";
+export const REGISTER_ROUTE = "/auth/signup";
 
 export const AuthRoutes = [LOGIN_ROUTE, REGISTER_ROUTE];
 
