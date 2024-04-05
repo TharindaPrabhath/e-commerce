@@ -5,13 +5,8 @@ import { useState } from "react";
 import Image from "next/image";
 import Link from "next/link";
 
-import {
-  Tooltip,
-  TooltipContent,
-  TooltipProvider,
-  TooltipTrigger,
-} from "@pulzeup/ui/components/ui/tooltip";
 import { Typography } from "@pulzeup/ui/components/ui/typography";
+import ProductVariant from "./product-variant";
 
 import { DEFAULT_FALLBACK_IMAGE } from "@/src/const";
 
@@ -68,7 +63,7 @@ function ProductCard({ data }: ProductCardProps) {
           {data.variants?.map((variant) => (
             <ProductVariant
               data={{ image: variant.image, text: variant.text }}
-              onClick={setThumbnail}
+              onClick={() => setThumbnail(variant.image)}
             />
           ))}
         </div>
@@ -78,35 +73,3 @@ function ProductCard({ data }: ProductCardProps) {
 }
 
 export default ProductCard;
-
-type ProductVariantProps = {
-  onClick: (image: string) => void;
-  data: {
-    text: string;
-    image: string;
-  };
-};
-
-function ProductVariant({ data, onClick }: ProductVariantProps) {
-  return (
-    <TooltipProvider>
-      <Tooltip>
-        <TooltipTrigger
-          className="border-b-2"
-          onClick={() => onClick(data.image)}
-        >
-          <Image
-            src={data.image}
-            alt="Other variants"
-            width={35}
-            height={35}
-            className="hover:scale-110 transform-gpu border"
-          />
-        </TooltipTrigger>
-        <TooltipContent>
-          <p>{data.text}</p>
-        </TooltipContent>
-      </Tooltip>
-    </TooltipProvider>
-  );
-}
