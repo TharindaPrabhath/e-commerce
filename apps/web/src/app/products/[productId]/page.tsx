@@ -29,12 +29,12 @@ function Product() {
 
   return (
     <main className="container">
-      <section className="grid md:grid-cols-3 relative">
-        <div className="col-span-2 py-4 px-10 md:p-12 ">
+      <section className="grid lg:grid-cols-3 relative">
+        <div className="col-span-2 py-4 px-10 lg:p-12 ">
           <Gallery images={images} />
         </div>
-        <div className="md:col-start-3 md:px-6 md:py-6">
-          <div className="mt-4 md:mt-12">
+        <div className="lg:col-start-3 lg:px-6 lg:py-6">
+          <div className="mt-4 lg:mt-12">
             <Typography variant="h1">Polo Black T Shirt</Typography>
             <Typography>LKR 1500</Typography>
           </div>
