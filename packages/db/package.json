@@ -1,0 +1,18 @@
+{
+  "name": "@pulzeup/db",
+  "version": "1.0.0",
+  "main": "./index.ts",
+  "types": "./index.ts",
+  "scripts": {
+    "db:format": "prisma format",
+    "db:generate": "prisma generate",
+    "db:push": "prisma db push --skip-generate",
+    "db:migrate": "prisma migrate dev"
+  },
+  "dependencies": {
+    "@prisma/client": "latest"
+  },
+  "devDependencies": {
+    "prisma": "latest"
+  }
+}
