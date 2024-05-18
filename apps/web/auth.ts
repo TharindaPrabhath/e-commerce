@@ -15,10 +15,16 @@ export const {
       return session;
     },
 
-    async jwt({ token }) {
+    async jwt({ token, account, profile }) {
+      if (account) {
+        console.log("Token", token);
+        console.log("Account", account);
+        console.log("Profile", profile);
+      }
       return token;
     },
   },
+
   events: {
     /*
      * This is called whenever a google account is linked
