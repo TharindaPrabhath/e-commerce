@@ -60,8 +60,9 @@ function ProductCard({ data }: ProductCardProps) {
       <Typography>LKR 1500</Typography>
       {hasVariants && (
         <div className="flex flex-row items-center gap-2 mt-4">
-          {data.variants?.map((variant) => (
+          {data.variants?.map((variant, index) => (
             <ProductVariant
+              key={index}
               data={{ image: variant.image, text: variant.text }}
               onClick={() => setThumbnail(variant.image)}
             />

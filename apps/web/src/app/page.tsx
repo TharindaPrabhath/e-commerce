@@ -7,8 +7,8 @@ export default function Page() {
       <section className="py-4">
         <Typography variant="h3">Featured Items</Typography>
         <div className="mt-4 grid grid-cols-2 md:grid-flow-col md:w-fit gap-x-4 gap-y-10">
-          {Products.map((product) => (
-            <ProductCard data={product} />
+          {Products.map((product, index) => (
+            <ProductCard key={index} data={product} />
           ))}
         </div>
       </section>
